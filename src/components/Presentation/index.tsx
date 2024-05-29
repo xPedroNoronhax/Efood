@@ -1,11 +1,16 @@
 import { Imagem, RestaurantName, RestaurantType } from "./style";
-import italiana from "../../assets/images/italiana.png";
 
-const Presentation = () => (
-  <Imagem style={{ backgroundImage: `url(${italiana})` }}>
+import { RestaurantOptions } from "../../pages/Home";
+
+type Props = {
+  restaurant: RestaurantOptions;
+};
+
+const Presentation = ({ restaurant }: Props) => (
+  <Imagem style={{ backgroundImage: `url(${restaurant.capa})` }}>
     <div className="container">
-      <RestaurantType>Italiana</RestaurantType>
-      <RestaurantName>La Dolce Vita Trattoria</RestaurantName>
+      <RestaurantType>{restaurant.tipo}</RestaurantType>
+      <RestaurantName>{restaurant.titulo}</RestaurantName>
     </div>
   </Imagem>
 );

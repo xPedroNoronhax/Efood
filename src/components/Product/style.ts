@@ -23,7 +23,7 @@ export const ProductImage = styled.img`
 
 export const ProductName = styled.h3`
   width: 100%;
-  max-width: 124px;
+
   font-weight: 900;
   font-size: 16px;
   color: ${colors.palha};

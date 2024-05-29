@@ -1,23 +1,23 @@
-import Restaurants from "../../models/Restaurant";
+import { RestaurantOptions } from "../../pages/Home";
 import Restaurant from "../Restaurant";
 import { Container } from "./style";
 
 type Props = {
-  restaurants: Restaurants[];
+  restaurants: RestaurantOptions[];
 };
 
 const RestaurantList = ({ restaurants }: Props) => (
   <Container>
-    {restaurants.map((restaurant, index) => {
-      const infos = index === 0 ? restaurant.infos : ["Italiana"];
+    {restaurants.map((restaurant) => {
       return (
         <Restaurant
-          key={restaurant.id}
-          infos={infos}
-          name={restaurant.name}
-          grade={restaurant.grade}
-          description={restaurant.description}
-          image={restaurant.image}
+          tipo={restaurant.tipo}
+          titulo={restaurant.titulo}
+          avaliacao={restaurant.avaliacao}
+          descricao={restaurant.descricao}
+          capa={restaurant.capa}
+          destacado={restaurant.destacado}
+          id={restaurant.id}
         />
       );
     })}

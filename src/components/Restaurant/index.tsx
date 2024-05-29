@@ -3,36 +3,42 @@ import star from "../../assets/images/estrela.svg";
 import Button from "../Button/Button";
 
 type Props = {
-  infos: string[];
-  name: string;
-  grade: number;
-  description: string;
-  image: string;
+  tipo: string;
+  titulo: string;
+  avaliacao: number;
+  descricao: string;
+  capa: string;
+  destacado: boolean;
+  id:number
 };
 
-const Restaurant = ({ infos, name, grade, description, image }: Props) => {
-  const isSingleInfo = infos.length === 1 && infos[0] === "Italiana";
-
+const Restaurant = ({
+  titulo,
+  tipo,
+  avaliacao,
+  descricao,
+  capa,
+  destacado,
+  id
+}: Props) => {
   return (
     <Card>
-      <img src={image} alt="sushi" />
-      <Infos isSingleInfo={isSingleInfo}>
-        {infos.map((info) => (
-          <Button key={info} type={"button"}>
-            {info}
-          </Button>
-        ))}
+      <img src={capa} alt="" />
+      <Infos isSingleInfo={!destacado}>
+        <Button type="button">{tipo}</Button>
+        {destacado && <Button type="button">Destaque do dia</Button>}
       </Infos>
+
       <NameRating>
-        <h3>{name}</h3>
+        <h3>{titulo}</h3>
         <div>
-          <span>{grade}</span>
+          <span>{avaliacao}</span>
           <img src={star} alt="star" />
         </div>
       </NameRating>
-      <Description>{description}</Description>
+      <Description>{descricao}</Description>
       <ButtonContainer>
-        <Button type="link" to="/restaurant">
+        <Button type="link" to={`/restaurant/${id}`}>
           Saiba mais
         </Button>
       </ButtonContainer>

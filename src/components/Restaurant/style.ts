@@ -1,6 +1,25 @@
 import styled from "styled-components";
 import { colors } from "../../styles";
 
+export const Infos = styled.div<{ isSingleInfo: boolean }>`
+  display: flex;
+  gap: 8px;
+  ${({ isSingleInfo }) =>
+    isSingleInfo
+      ? `
+      position: absolute;
+      top: 16px;
+      right: 16px;  // Alterado de left para right
+      margin-left: 395px;
+      margin-bottom: 175px;
+    `
+      : `
+      position: absolute;
+      top: 16px;
+      right: 16px;  // Alterado de left para right
+    `}
+`;
+
 export const Card = styled.div`
   max-width: 472px;
   height: 398px;
@@ -12,6 +31,7 @@ export const Card = styled.div`
 
   img {
     height: 218px;
+    object-fit: cover;
   }
 `;
 
@@ -35,6 +55,7 @@ export const NameRating = styled.div`
 
 export const Description = styled.p`
   width: 456px;
+  height: 88px;
   font-weight: 400;
   font-size: 14px;
   color: ${colors.vermelho};
@@ -42,31 +63,8 @@ export const Description = styled.p`
   margin-left: 8px;
 `;
 
-interface InfosProps {
-  isSingleInfo: boolean;
-}
-
-export const Infos = styled.div<InfosProps>`
-  display: flex;
-  gap: 8px;
-  ${({ isSingleInfo }) =>
-    isSingleInfo
-      ? `
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      margin-left: 395px;
-      margin-bottom: 175px;
-    `
-      : `
-      position: absolute;
-      top: 16px;
-      left: 266px;
-    `}
-`;
-
 export const ButtonContainer = styled.div`
-  margin-top: 20px;
+  margin-top: 16px;
   margin-left: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 `;

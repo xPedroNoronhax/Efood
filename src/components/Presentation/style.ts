@@ -8,6 +8,7 @@ export const Imagem = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
+
   .container {
     display: flex;
     flex-direction: column;
