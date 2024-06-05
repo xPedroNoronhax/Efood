@@ -19,6 +19,10 @@ export const GlobalCss = createGlobalStyle`
         background-color: ${colors.palhabg};
     }
 
+    li{
+        list-style-type: none;
+    }
+
     .container { 
         max-width: 1024px;
         width: 100%;

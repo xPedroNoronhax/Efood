@@ -35,6 +35,7 @@ export const CartItems = styled.a`
   font-weight: 900;
   font-size: 18px;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export const RestaurantLink = styled(Link)`

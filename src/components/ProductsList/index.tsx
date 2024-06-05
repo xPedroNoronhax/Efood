@@ -14,6 +14,7 @@ const ProductsList = ({ products }: { products: MenuItem[] }) => {
 
   const handleCloseModal = () => {
     setModalVisible(false);
+    setSelectedProduct(null);
   };
   return (
     <div>
@@ -29,6 +30,7 @@ const ProductsList = ({ products }: { products: MenuItem[] }) => {
         ))}
       </Container>
       <Modal
+        item={selectedProduct}
         isVisible={isModalVisible}
         onClose={handleCloseModal}
         {...selectedProduct}
