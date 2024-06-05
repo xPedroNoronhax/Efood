@@ -81,8 +81,16 @@ export const CloseButton = styled.img`
   position: absolute;
   top: 8px;
   right: 8px;
-  bottom: 320px;
-  left: 1000px;
   max-width: 16px;
   height: 16px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    top: 8px;
+    right: 8px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    top: 8px;
+    right: 8px;
+  }
 `;
