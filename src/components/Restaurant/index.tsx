@@ -9,7 +9,7 @@ type Props = {
   descricao: string;
   capa: string;
   destacado: boolean;
-  id:number
+  id: number;
 };
 
 const Restaurant = ({
@@ -19,8 +19,14 @@ const Restaurant = ({
   descricao,
   capa,
   destacado,
-  id
+  id,
 }: Props) => {
+  const getDescricao = (descricao: string) => {
+    if (descricao.length > 125) {
+      return descricao.slice(0, 123) + "...";
+    }
+    return descricao;
+  };
   return (
     <Card>
       <img src={capa} alt="" />
@@ -36,7 +42,7 @@ const Restaurant = ({
           <img src={star} alt="star" />
         </div>
       </NameRating>
-      <Description>{descricao}</Description>
+      <Description>{getDescricao(descricao)}</Description>
       <ButtonContainer>
         <Button type="link" to={`/restaurant/${id}`}>
           Saiba mais

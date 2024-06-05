@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../styles";
+import { breakpoints, colors } from "../../styles";
 
 export const Infos = styled.div<{ isSingleInfo: boolean }>`
   display: flex;
@@ -22,7 +22,6 @@ export const Infos = styled.div<{ isSingleInfo: boolean }>`
 
 export const Card = styled.div`
   max-width: 472px;
-  height: 398px;
   background-color: ${colors.branco};
   border: 1px solid ${colors.vermelho};
   display: flex;
@@ -32,6 +31,14 @@ export const Card = styled.div`
   img {
     height: 218px;
     object-fit: cover;
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    max-width: 362px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 300px;
   }
 `;
 
@@ -55,12 +62,15 @@ export const NameRating = styled.div`
 
 export const Description = styled.p`
   width: 456px;
-  height: 88px;
   font-weight: 400;
   font-size: 14px;
   color: ${colors.vermelho};
   margin-right: 8px;
   margin-left: 8px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    max-width: 80%;
+  }
 `;
 
 export const ButtonContainer = styled.div`

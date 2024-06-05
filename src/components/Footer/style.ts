@@ -32,7 +32,7 @@ export const MidiasContainer = styled.div`
 `;
 
 export const Texto = styled.p`
-  width: 480px;
+  max-width: 480px;
   margin-top: 80px;
   margin-bottom: 40px;
   font-weight: 400;

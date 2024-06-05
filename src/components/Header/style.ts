@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../styles";
+import { breakpoints, colors } from "../../styles";
 import { Link } from "react-router-dom";
 
 export const Imagem = styled.div`
@@ -20,9 +20,28 @@ export const Imagem = styled.div`
 
     img {
       max-width: 125px;
+      width: 100%;
       height: 57.5px;
       margin-right: 193px;
       margin-left: 341px;
+    }
+    @media (max-width: ${breakpoints.desktop}) {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+      img {
+        margin: 0;
+        width: auto;
+      }
+    }
+
+    @media (max-width: ${breakpoints.tablet}) {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10%;
+      gap: 10px;
     }
   }
 `;
@@ -36,6 +55,12 @@ export const CartItems = styled.a`
   font-size: 18px;
   text-decoration: none;
   cursor: pointer;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    text-align: center;
+    max-width: 25%;
+    font-size: 14px;
+  }
 `;
 
 export const RestaurantLink = styled(Link)`

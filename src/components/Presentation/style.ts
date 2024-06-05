@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../styles";
+import { breakpoints, colors } from "../../styles";
 
 export const Imagem = styled.div`
   width: 100%;
@@ -7,7 +7,18 @@ export const Imagem = styled.div`
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
 
   .container {
     display: flex;
@@ -18,6 +29,12 @@ export const Imagem = styled.div`
     padding-top: 24px;
     padding-bottom: 32px;
     justify-content: space-between;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      max-width: 80%;
+    }
   }
 `;
 
