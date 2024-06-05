@@ -1,6 +1,6 @@
 // style.js
 import styled from "styled-components";
-import { colors } from "../../styles";
+import { breakpoints, colors } from "../../styles";
 
 export const ModalContainer = styled.div`
   display: none;
@@ -21,7 +21,7 @@ export const ModalContainer = styled.div`
 export const ModalInfo = styled.div`
   position: relative;
   max-width: 1024px;
-  height: 344px;
+
   width: 100%;
   background-color: ${colors.vermelho};
   color: ${colors.branco};
@@ -33,6 +33,15 @@ export const ModalInfo = styled.div`
     max-width: 280px;
     object-fit: fill;
   }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    max-width: 90%;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 80%;
+    flex-direction: column;
+  }
 `;
 
 export const ModalContent = styled.div`
@@ -41,7 +50,6 @@ export const ModalContent = styled.div`
   justify-content: space-between;
 
   h3 {
-    max-width: 140px;
     font-weight: 900;
     font-size: 18px;
     margin-bottom: 16px;
@@ -63,6 +71,9 @@ export const ModalContent = styled.div`
     text-align: center;
     margin-bottom: 27px;
     border: none;
+    @media (max-width: ${breakpoints.tablet}) {
+      height: 40px;
+    }
   }
 `;
 
