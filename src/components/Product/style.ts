@@ -9,7 +9,7 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 8px;
-  
+
   background-color: ${colors.vermelho};
 
   gap: 8px;
@@ -19,6 +19,7 @@ export const ProductImage = styled.img`
   width: 100%;
   max-width: 304px;
   height: 167px;
+  object-fit: cover;
 `;
 
 export const ProductName = styled.h3`
@@ -42,7 +43,7 @@ export const AddToCartButton = styled.button`
   max-width: 304px;
   height: 24px;
   background-color: ${colors.palha};
-  
+
   text-align: center;
   font-weight: 700;
   font-size: 14px;

@@ -32,7 +32,7 @@ export const ModalInfo = styled.div`
 
   img {
     max-width: 280px;
-    object-fit: fill;
+    object-fit: cover;
   }
 
   @media (max-width: ${breakpoints.desktop}) {
