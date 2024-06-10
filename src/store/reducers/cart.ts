@@ -5,12 +5,18 @@ type CartState = {
   items: MenuItem[];
   isOpen: boolean;
   total: number;
+  deliveryStep: boolean;
+  paymentStep: boolean;
+  conclusionStep: boolean;
 };
 
 const initialState: CartState = {
   items: [],
-  isOpen: false,
+  isOpen: true,
   total: 0,
+  deliveryStep: false,
+  paymentStep: false,
+  conclusionStep: false,
 };
 
 const cartSlice = createSlice({
@@ -38,8 +44,41 @@ const cartSlice = createSlice({
     close: (state) => {
       state.isOpen = false;
     },
+    showCart: (state) => {
+      state.isOpen = true;
+      state.deliveryStep = false;
+      state.paymentStep = false;
+      state.conclusionStep = false;
+    },
+    showDeliveryForm: (state) => {
+      state.isOpen = false;
+      state.deliveryStep = true;
+      state.paymentStep = false;
+      state.conclusionStep = false;
+    },
+    showPaymentForm: (state) => {
+      state.isOpen = false;
+      state.deliveryStep = false;
+      state.paymentStep = true;
+      state.conclusionStep = false;
+    },
+    showConclusion: (state) => {
+      state.isOpen = false;
+      state.deliveryStep = false;
+      state.paymentStep = false;
+      state.conclusionStep = true;
+    },
   },
 });
 
-export const { add, remove, open, close } = cartSlice.actions;
+export const {
+  add,
+  remove,
+  open,
+  close,
+  showCart,
+  showDeliveryForm,
+  showPaymentForm,
+  showConclusion,
+} = cartSlice.actions;
 export default cartSlice.reducer;

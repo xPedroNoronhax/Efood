@@ -5,6 +5,7 @@ export const colors = {
   palha: "#FFEBD9",
   palhabg: "#FFF8F2",
   branco: "#FFF",
+  preto: "#4B4B4B",
 };
 
 export const breakpoints = {
@@ -18,6 +19,13 @@ export const GlobalCss = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Roboto',sans-serif;
+        input:focus {
+    outline: none;
+}
+
+button{
+  cursor: pointer;
+}
     }
 
     body{
