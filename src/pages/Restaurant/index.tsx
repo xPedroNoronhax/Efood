@@ -5,11 +5,12 @@ import Presentation from "../../components/Presentation";
 import ProductsList from "../../components/ProductsList";
 
 import { useGetRestaurantIdQuery } from "../../services/api";
+import Loader from "../../components/Loader";
 const Restaurant = () => {
   const { id } = useParams();
   const { data: restaurant, error, isLoading } = useGetRestaurantIdQuery(id!);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loader />;
   if (error) return <p>Failed to load restaurant data</p>;
   return (
     <>

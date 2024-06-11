@@ -1,4 +1,5 @@
 import Hero from "../../components/Hero";
+import Loader from "../../components/Loader";
 import RestaurantList from "../../components/RestaurantList";
 import { useGetFeaturedRestaurantQuery } from "../../services/api";
 
@@ -23,9 +24,13 @@ export type RestaurantOptions = {
 };
 
 const Home = () => {
-  const { data: restaurantOptions, error, isLoading } = useGetFeaturedRestaurantQuery();
+  const {
+    data: restaurantOptions,
+    error,
+    isLoading,
+  } = useGetFeaturedRestaurantQuery();
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loader />;
   if (error) return <p>Failed to load data</p>;
 
   return (

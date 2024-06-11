@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useFormik } from "formik";
+import InputMask from "react-input-mask";
 import * as Yup from "yup";
 import { RootReducer } from "../../store";
 import {
@@ -37,7 +38,7 @@ const Checkout = () => {
       expiredYear: "",
     },
     validationSchema: Yup.object({
-      fullName: Yup.string().required("Campo obrigatório"),
+      fullName: Yup.string().min(5).required("Campo obrigatório"),
       address: Yup.string().required("Campo obrigatório"),
       city: Yup.string().required("Campo obrigatório"),
       zipCode: Yup.string().required("Campo obrigatório"),
@@ -159,13 +160,14 @@ const Checkout = () => {
             <div>
               <div>
                 <label htmlFor="zipCode">CEP</label>
-                <input
+                <InputMask
                   id="zipCode"
                   type="text"
                   name="zipCode"
                   value={form.values.zipCode}
                   onChange={form.handleChange}
                   onBlur={form.handleBlur}
+                  mask="99999-999"
                 />
                 <small>{getErrorMessage("zipCode", form.errors.zipCode)}</small>
               </div>
@@ -217,13 +219,14 @@ const Checkout = () => {
             <div className="infos">
               <div>
                 <label htmlFor="cardNumber">Número do cartão</label>
-                <input
+                <InputMask
                   id="cardNumber"
                   type="text"
                   name="cardNumber"
                   value={form.values.cardNumber}
                   onChange={form.handleChange}
                   onBlur={form.handleBlur}
+                  mask="9999 9999 9999 9999"
                 />
                 <small>
                   {getErrorMessage("cardNumber", form.errors.cardNumber)}
@@ -231,13 +234,14 @@ const Checkout = () => {
               </div>
               <div>
                 <label htmlFor="securityKey">CVV</label>
-                <input
+                <InputMask
                   id="securityKey"
                   type="text"
                   name="securityKey"
                   value={form.values.securityKey}
                   onChange={form.handleChange}
                   onBlur={form.handleBlur}
+                  mask="999"
                 />
                 <small>
                   {getErrorMessage("securityKey", form.errors.securityKey)}
@@ -247,13 +251,14 @@ const Checkout = () => {
             <div className="expiredInfos">
               <div>
                 <label htmlFor="expiredMonth">Mês de vencimento</label>
-                <input
+                <InputMask
                   id="expiredMonth"
                   type="text"
                   name="expiredMonth"
                   value={form.values.expiredMonth}
                   onChange={form.handleChange}
                   onBlur={form.handleBlur}
+                  mask="99"
                 />
                 <small>
                   {getErrorMessage("expiredMonth", form.errors.expiredMonth)}
@@ -261,13 +266,14 @@ const Checkout = () => {
               </div>
               <div>
                 <label htmlFor="expiredYear">Ano de vencimento</label>
-                <input
+                <InputMask
                   id="expiredYear"
                   type="text"
                   name="expiredYear"
                   value={form.values.expiredYear}
                   onChange={form.handleChange}
                   onBlur={form.handleBlur}
+                  mask="99"
                 />
                 <small>
                   {getErrorMessage("expiredYear", form.errors.expiredYear)}

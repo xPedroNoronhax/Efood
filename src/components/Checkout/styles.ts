@@ -34,7 +34,7 @@ export const DeliveryForm = styled.div`
   }
 
   small {
-    min-height: 18px;
+    min-height: 10px;
   }
 
   div {
