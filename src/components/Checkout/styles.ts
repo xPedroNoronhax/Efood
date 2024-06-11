@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colors } from "../../styles";
 import { CartButton } from "../Cart/styles";
 
-export const DeliveryForm = styled.form`
+export const DeliveryForm = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 344px;
@@ -34,8 +34,7 @@ export const DeliveryForm = styled.form`
   }
 
   small {
-    min-height: 18px; 
-  
+    min-height: 18px;
   }
 
   div {
@@ -55,7 +54,7 @@ export const DeliveryForm = styled.form`
   }
 `;
 
-export const PaymentForm = styled.form`
+export const PaymentForm = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 344px;
@@ -83,11 +82,6 @@ export const PaymentForm = styled.form`
     color: ${colors.preto};
     font-weight: 700;
     font-size: 14px;
-  }
-
-  small {
-    min-height: 18px; 
-  
   }
 
   .infos {

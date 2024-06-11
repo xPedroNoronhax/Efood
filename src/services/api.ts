@@ -1,13 +1,17 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { RestaurantOptions } from "../pages/Home";
 
-type Product = {
-  id: number;
-  price: number;
+type Resposta = {
+  orderId: string;
 };
 
 type PurchasePayload = {
-  products: Product[];
+  products: [
+    {
+      id: number;
+      price: number;
+    }
+  ];
   delivery: {
     receiver: string;
     address: {
@@ -30,7 +34,6 @@ type PurchasePayload = {
     };
   };
 };
-
 const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://fake-api-tau.vercel.app/api/efood",
@@ -42,7 +45,7 @@ const api = createApi({
     getRestaurantId: builder.query<RestaurantOptions, string>({
       query: (id) => `restaurantes/${id}`,
     }),
-    purchase: builder.mutation<unknown, PurchasePayload>({
+    purchase: builder.mutation<Resposta, PurchasePayload>({
       query: (body) => ({
         url: "checkout",
         method: "POST",
