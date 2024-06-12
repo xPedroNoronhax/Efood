@@ -46,8 +46,6 @@ const cartSlice = createSlice({
     },
     close: (state) => {
       state.isOpen = false;
-      state.items = [];
-      state.total = 0;
     },
 
     showDeliveryForm: (state) => {
@@ -67,6 +65,8 @@ const cartSlice = createSlice({
       state.deliveryStep = false;
       state.paymentStep = false;
       state.conclusionStep = true;
+      state.items = [];
+      state.total = 0;
     },
   },
 });
