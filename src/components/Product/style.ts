@@ -10,7 +10,7 @@ export const Card = styled.div`
   justify-content: space-between;
   padding: 8px;
 
-  background-color: ${colors.vermelho};
+  background-color: ${colors.red};
 
   gap: 8px;
 `;
@@ -27,7 +27,7 @@ export const ProductName = styled.h3`
 
   font-weight: 900;
   font-size: 16px;
-  color: ${colors.palha};
+  color: ${colors.straw};
 `;
 
 export const ProductDescription = styled.p`
@@ -35,18 +35,18 @@ export const ProductDescription = styled.p`
   max-width: 304px;
   font-weight: 400;
   font-size: 14px;
-  color: ${colors.palha};
+  color: ${colors.straw};
 `;
 
 export const AddToCartButton = styled.button`
   width: 100%;
   max-width: 304px;
   height: 24px;
-  background-color: ${colors.palha};
+  background-color: ${colors.straw};
 
   text-align: center;
   font-weight: 700;
   font-size: 14px;
-  color: ${colors.vermelho};
+  color: ${colors.red};
   border: none;
 `;

@@ -10,7 +10,7 @@ export const DeliveryForm = styled.div`
   width: 100%;
   padding: 0px 8px 0px 8px;
   margin-top: 0;
-  color: ${colors.branco};
+  color: ${colors.white};
   font-weight: 700;
   font-size: 14px;
 
@@ -28,7 +28,7 @@ export const DeliveryForm = styled.div`
     height: 32px;
     border: none;
     padding: 8px;
-    color: ${colors.preto};
+    color: ${colors.black};
     font-weight: 700;
     font-size: 14px;
   }
@@ -61,7 +61,7 @@ export const PaymentForm = styled.div`
   width: 100%;
   padding: 0px 8px 0px 8px;
   margin-top: 0;
-  color: ${colors.branco};
+  color: ${colors.white};
   font-weight: 700;
   font-size: 14px;
 
@@ -79,7 +79,7 @@ export const PaymentForm = styled.div`
     height: 32px;
     border: none;
     padding: 8px;
-    color: ${colors.preto};
+    color: ${colors.black};
     font-weight: 700;
     font-size: 14px;
   }
@@ -129,7 +129,7 @@ export const PaymentForm = styled.div`
 `;
 
 export const Conclusion = styled.div`
-  color: ${colors.palha};
+  color: ${colors.straw};
   h3 {
     font-size: 16px;
     margin-top: 32px;

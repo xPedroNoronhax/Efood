@@ -7,7 +7,6 @@ export const Imagem = styled.div`
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
-  
 
   .container {
     display: flex;
@@ -26,7 +25,7 @@ export const Imagem = styled.div`
       max-width: 539px;
       font-weight: 900;
       font-size: 36px;
-      color: ${colors.vermelho};
+      color: ${colors.red};
       text-align: center;
       margin-bottom: 40px;
     }

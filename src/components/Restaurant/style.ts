@@ -22,8 +22,8 @@ export const Infos = styled.div<{ isSingleInfo: boolean }>`
 
 export const Card = styled.div`
   max-width: 472px;
-  background-color: ${colors.branco};
-  border: 1px solid ${colors.vermelho};
+  background-color: ${colors.white};
+  border: 1px solid ${colors.red};
   display: flex;
   flex-direction: column;
   position: relative;
@@ -48,7 +48,7 @@ export const NameRating = styled.div`
   justify-content: space-between;
   font-size: 18px;
   font-weight: 700;
-  color: ${colors.vermelho};
+  color: ${colors.red};
 
   img {
     width: 20px;
@@ -64,7 +64,7 @@ export const Description = styled.p`
   width: 456px;
   font-weight: 400;
   font-size: 14px;
-  color: ${colors.vermelho};
+  color: ${colors.red};
   margin-right: 8px;
   margin-left: 8px;
 

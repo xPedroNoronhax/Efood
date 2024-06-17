@@ -5,8 +5,8 @@ export const ButtonContainer = styled.button`
   font-weight: 700;
   font-size: 12px;
   text-align: center;
-  color: ${colors.palha};
-  background-color: ${colors.vermelho};
+  color: ${colors.straw};
+  background-color: ${colors.red};
   padding: 6px 4px;
   border: none;
 `;
@@ -15,10 +15,9 @@ export const ButtonLink = styled(Link)`
   font-weight: 700;
   font-size: 14px;
   text-align: center;
-  color: ${colors.palha};
-  background-color: ${colors.vermelho};
+  color: ${colors.straw};
+  background-color: ${colors.red};
   padding: 6px 4px;
   border: none;
   text-decoration: none;
 `;
-

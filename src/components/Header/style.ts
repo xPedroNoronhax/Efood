@@ -50,7 +50,7 @@ export const CartItems = styled.a`
   max-width: 256px;
   width: 100%;
   text-align: right;
-  color: ${colors.vermelho};
+  color: ${colors.red};
   font-weight: 900;
   font-size: 18px;
   text-decoration: none;
@@ -66,7 +66,7 @@ export const CartItems = styled.a`
 export const RestaurantLink = styled(Link)`
   max-width: 109px;
   text-align: center;
-  color: ${colors.vermelho};
+  color: ${colors.red};
   font-weight: 900;
   font-size: 18px;
   text-decoration: none;

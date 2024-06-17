@@ -24,8 +24,8 @@ export const ModalInfo = styled.div`
   max-width: 1024px;
 
   width: 100%;
-  background-color: ${colors.vermelho};
-  color: ${colors.branco};
+  background-color: ${colors.red};
+  color: ${colors.white};
   display: flex;
   padding: 32px;
   gap: 24px;
@@ -64,10 +64,10 @@ export const ModalContent = styled.div`
 
   button {
     height: 24px;
-    background-color: ${colors.branco};
+    background-color: ${colors.white};
     font-weight: 700;
     font-size: 14px;
-    color: ${colors.vermelho};
+    color: ${colors.red};
     max-width: 218px;
     text-align: center;
     margin-bottom: 27px;

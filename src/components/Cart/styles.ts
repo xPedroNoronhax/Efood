@@ -24,14 +24,13 @@ export const CartContainer = styled.div`
   &.is-open {
     display: flex;
   }
-  
 `;
 
 export const SideBar = styled.aside`
   max-width: 360px;
   width: 100%;
-  background-color: ${colors.vermelho};
-  color: ${colors.vermelho};
+  background-color: ${colors.red};
+  color: ${colors.red};
   padding: 32px 8px 0px 8px;
   z-index: 1;
 `;
@@ -41,7 +40,7 @@ export const CartItem = styled.li`
   max-width: 344px;
   width: 100%;
   padding: 8px;
-  background-color: ${colors.palha};
+  background-color: ${colors.straw};
   gap: 8px;
   margin-bottom: 16px;
   img {
@@ -74,7 +73,7 @@ export const CartItem = styled.li`
       width: 16px;
       height: 16px;
       background-color: transparent;
-      color: ${colors.vermelho};
+      color: ${colors.red};
       border: none;
       position: absolute;
       bottom: 0px;
@@ -86,7 +85,7 @@ export const CartItem = styled.li`
 export const Total = styled.div`
   max-width: 344px;
   width: 100%;
-  color: ${colors.palha};
+  color: ${colors.straw};
   font-weight: 700;
   font-size: 14px;
   margin-top: 40;
@@ -99,8 +98,8 @@ export const CartButton = styled.button`
   max-width: 344px;
   width: 100%;
   height: 24px;
-  background-color: ${colors.palha};
-  color: ${colors.vermelho};
+  background-color: ${colors.straw};
+  color: ${colors.red};
   text-align: center;
   font-weight: 700;
   font-size: 14px;

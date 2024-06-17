@@ -41,7 +41,7 @@ export const Imagem = styled.div`
 export const RestaurantType = styled.h3`
   font-weight: 100;
   font-size: 32px;
-  color: ${colors.branco};
+  color: ${colors.white};
   width: 100%;
   max-width: 101px;
 `;
@@ -49,7 +49,7 @@ export const RestaurantType = styled.h3`
 export const RestaurantName = styled.h2`
   font-weight: 900;
   font-size: 32px;
-  color: ${colors.branco};
+  color: ${colors.white};
   width: 100%;
   max-width: 676px;
 `;

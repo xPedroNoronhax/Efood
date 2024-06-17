@@ -1,11 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 export const colors = {
-  vermelho: "#E66767",
-  palha: "#FFEBD9",
-  palhabg: "#FFF8F2",
-  branco: "#FFF",
-  preto: "#4B4B4B",
+  red: "#E66767",
+  straw: "#FFEBD9",
+  strawbg: "#FFF8F2",
+  white: "#FFF",
+  black: "#4B4B4B",
 };
 
 export const breakpoints = {
@@ -29,7 +29,7 @@ button{
     }
 
     body{
-        background-color: ${colors.palhabg};
+        background-color: ${colors.strawbg};
     }
 
     li{

@@ -4,7 +4,7 @@ import { colors } from "../../styles";
 export const FooterContainer = styled.div`
   width: 100%;
   height: 298px;
-  background-color: ${colors.palha};
+  background-color: ${colors.straw};
 
   .container {
     display: flex;
@@ -37,6 +37,6 @@ export const Texto = styled.p`
   margin-bottom: 40px;
   font-weight: 400;
   font-size: 10px;
-  color: ${colors.vermelho};
+  color: ${colors.red};
   text-align: center;
 `;
